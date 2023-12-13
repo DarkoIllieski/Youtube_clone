@@ -1,6 +1,6 @@
-import logo from "../assets/logo.png"
-import { Menu, Upload } from "lucide-react"
-import Button  from "../components/Button"
+import logo from "../assets/logo.png";
+import { Menu, Upload, Bell, User, Mic } from "lucide-react";
+import Button from "../components/Button";
 
 const PageHeader = () => {
   return (
@@ -13,16 +13,21 @@ const PageHeader = () => {
           <img src={logo} className="h-6"></img>
         </a>
       </div>
-      <div></div>
-      <div>
+      <form className="flex gap-4 flex-grow justify-center">
+        <div></div>
+        <Button type="button" size="icon" className="flex-shrink-0">
+          <Mic />
+        </Button>
+      </form>
+      <div className="flex flex-shrink-0 md:gap-2">
         <Button size="icon" variant="ghost">
           <Upload />
         </Button>
         <Button size="icon" variant="ghost">
-          <Upload />
+          <Bell />
         </Button>
         <Button size="icon" variant="ghost">
-          <Upload />
+          <User />
         </Button>
       </div>
     </div>
